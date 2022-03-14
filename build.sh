@@ -15,7 +15,7 @@ npm run build
 cd ..
 
 rm -rf ./proxor/webs
-cp -r ./app/build ./proxor/webs
+cp -r ./app/dist ./proxor/webs
 
 echo "[Proxor]前端打包完成"
 
