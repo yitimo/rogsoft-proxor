@@ -1,3 +1,9 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+# FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+FROM node:16.14.2
 
-# TODO: 用于调试 只复现基础的 asp.net core 环境, 并提供 iptables
+COPY ./debug /app
+COPY ./proxor/bin /bin
+
+EXPOSE 80
+
+CMD ["node", "/app/main.js"]
